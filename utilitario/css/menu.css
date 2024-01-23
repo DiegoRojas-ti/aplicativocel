@@ -1,0 +1,689 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);*/
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Light.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/OpenSans-Light.woff2') format('woff2'), /* Modern Browsers */
+    url('../fonts/OpenSans-Light.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/OpenSans-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/OpenSans-Light.svg') format('svg'); /* Legacy iOS */  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Open Sans',sans-serif,tahoma; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;font-family: 'Open Sans',sans-serif,tahoma;
+}
+
+
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+
+.des { float: left }
+.cell{display: table-cell;}
+.t120{ font-size:120px  }
+
+/*
+.titulo{font:45px 'Raleway';text-transform:uppercase;letter-spacing:-2px; }
+
+.texto{ font:14px OpenSans-Light;  }
+
+ 
+ 
+ 
+ 
+ .beba{ font-family :BebasNeue;  }
+ .oswald-b{ font-family :Oswald-Bold;  }
+ .oswald-l{ font-family :Oswald-Light;  }
+ .oswald-r{ font-family :Oswald-Regular;  }
+
+ .pirulen{ font-family :Pirulen;  }
+ 
+.sansPoster-b{ font-family : SansPosterBoldJL;  }
+ 
+ 
+ 
+ .contactenos {
+  padding: 10px 0 10px;
+  background: #F2F2F2 url('../images/map-image.png') top left no-repeat;color_:#000;   
+}
+ 
+ .contact-info{
+ background_: #89BB24;
+ padding_: 50px;
+ margin-bottom: 50px;
+  ;color:#000;
+}
+.contact-info address {
+margin-bottom: 20px;
+font-style: normal;
+line-height: 27px;
+font-size: 15px;
+}
+.contact-info .form-control { 
+padding: 6px 12px;
+border-radius: 0;
+}
+ 
+.padR { padding-right:10px}
+.padL { padding-right:10px} 
+.pad { padding:10px} 
+ 
+.bg{background:#ccc}
+ 
+.bgfixed{background: url(../images/fondoSOFT.jpg) no-repeat center center fixed;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;}
+
+.bgfixed a:link{color:#0099FF}
+*/
+
+
+
+.content a:link{text-decoration:none;color:#0099FF}
+
+
+
+
+.wrapper {
+  width: 94%;
+  max-width: 1300px; /*1140px;*/
+  margin: 0 auto;
+}
+/*
+.wrapper-small { max-width: 728px; }
+
+.wrapper-medium {   width: 94%;  max-width: 1140px; }
+*/
+
+/*
+.subpie {   background:#01578E;#1B5E85;color:#fff; }
+.subpie .subpie_p {  height:300px;}
+
+ .subpie a{  color:#fff; text-decoration:none }
+*/ 
+ 
+
+.img {width:98%}
+
+
+.pie {   background:#206D9B;color:#fff;  }
+.pie .pie_p { height:100px;}
+.pie a:link {   color:#fff; text-decoration:none }
+.pie a:hover {   color:#ccc;   }
+
+		
+
+.a-m {vertical-align:middle}.a-t {vertical-align:top}.a-b {vertical-align:bottom} 
+.c{text-align:center}.r{text-align:right}.l{text-align:left}
+		
+.wrapper-flush { width: 100%; }
+
+/**
+ * Navigation
+ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  background-color_: #47A3DA;#efefef; 
+}
+
+.menu-fixed {
+background-color: #47A3DA; 
+}
+
+/** 
+* Nav container 
+* 1. Ensure this slides in below parent
+* 2. Hide by default
+* 3. Smoother scrolling experience on iOS
+*/
+
+.nav-container {
+  position: fixed;
+  top: 60px; /* 1 */
+  left: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  visibility: hidden; /* 2 */
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%); /* 2 */
+  background-color_: #c0c0c0;
+  -webkit-overflow-scrolling: touch; /* 3 */
+}
+
+/* 1. Show when `.is-visible` class is added */
+
+.nav-container.is-visible {
+  visibility: visible; /* 1 */
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0); /* 1 */
+}
+
+/* Nav toggle */
+
+.nav-toggle {
+  line-height: 1;
+  display: inline-block;
+  float: right;
+  padding_: 1.25rem 1rem;
+  padding: 1.05rem 0.7rem;
+  border: 0;
+  background-color: #47A3DA;#e74c3c;
+}
+
+/* Nav toggle icon */
+
+.nav-toggle .icon-menuu {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 20px;
+  vertical-align: middle;
+  fill: none;
+}
+
+/* Nav toggle icon lines */
+
+.icon-menuu .line {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  background-color: #fff;
+}
+
+/* Nav toggle icon line 1 */
+
+.icon-menuu .line-1 { top: 0; }
+
+/* When active, rotate line 1 to be lefthand part of X */
+
+.is-active .icon-menuu .line-1 {
+  -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+  -ms-transform: translateY(8px) translateX(0) rotate(45deg);
+  transform: translateY(8px) translateX(0) rotate(45deg);
+}
+
+/* Nav toggle icon line 2 */
+
+.icon-menuu .line-2 {
+  top: 50%;
+  margin-top: -2px;
+}
+
+/* When active, hide line 2 */
+
+.is-active .icon-menuu .line-2 { opacity: 0; }
+
+/* Nav toggle icon line 3 */
+
+.icon-menuu .line-3 { bottom: 0; }
+
+/* When active, rotate line 3 to be righthand part of X */
+
+.is-active .icon-menuu .line-3 {
+  -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+  -ms-transform: translateY(-8px) translateX(0) rotate(-45deg);
+  transform: translateY(-8px) translateX(0) rotate(-45deg);
+}
+
+/* Remove default list styles for menus */
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/** 
+* 1. Give menu a lighter background than its container 
+* 2. Prevent menu text from being accidentally highlighted
+*/
+
+.nav-menu {
+ font-family:Aftasans;
+  background-color_: #47A3DA;#dedede; /* 1 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;         /* 2 */
+  
+}
+
+/* Give menu items a top border */
+
+.nav-menu .menu-item { border-top: 1px solid #bbb; }
+
+/* Give last menu item a bottom border */
+
+.nav-menu > .menu-item:last-child { border-bottom: 1px solid #bbb; }
+
+/* Darker background color on hover, and when toggled */
+
+.nav-menu > .menu-item:hover,
+.nav-menu > .menu-item.is-active { background-color_: #00486A;#d0d0d0 }
+
+/* 1. Menu links are block level, by default */
+
+.nav-menu .menu-link {
+  display: block; /* 1 */
+  text-decoration: none;
+  color_: #444;;color:#ffffff;
+  padding_: 0.75rem 1rem;
+  padding: 0.75rem 0.60rem;
+  font-family: "Open Sans";
+  font-weight:bold;
+  
+}
+
+/* 1. Menu items with dropdowns appear clickable */
+
+.has-dropdown {
+  position: relative;
+  cursor: pointer; /* 1 */
+}
+
+/* 1. Parent menu links inlined so you can toggle the dropdown */
+
+.has-dropdown > .menu-link { display: inline-block; }
+
+/* 1. Add an icon to menu items that have sub menus */
+
+.has-dropdown:after {
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  bottom: 0;
+  content: "+"; /* 1 */
+  color: #222;
+}
+
+/* 1. Switch icon to n-dash when toggled */
+
+.has-dropdown.is-active:after { content: "\2013"; /* 1 */ }
+
+.dsplg_ { content: "e6f2"; /* 1 */ }
+.icople_{ background: url(../utilitario/ico/ui-icons_cc0000_256x240.png) no-repeat }
+
+/**
+ * Dropdowns
+ * 1. Hide dropdowns by default
+ */
+
+.nav-dropdown {
+  display: none; /* 1 */
+  background-color: #47A3DA;#c0c0c0;text-align:left
+  
+}
+
+/* 1. Show dropdown when toggled */
+
+.has-dropdown.is-active > .nav-dropdown { display: block; /* 1 */ }
+
+/* 2nd level dropdown */
+
+.nav-dropdown .nav-dropdown { background-color: #aaa; }
+
+.nav-dropdown .menu-item { border-color: #a0a0a0; }
+
+.nav-dropdown .nav-dropdown .menu-item {
+  background-color_: #b0b0b0;
+  border-color:#909090;
+}
+
+/* Main content area */
+
+.content { margin-top_: 60px; padding-top_: 180px; padding-top: 80px;}
+
+.content .wrapper { padding_: 1rem 0; }
+
+/*
+.nav-menu .menu-item > a:after { content: '\2719'; right: 20px; }
+   
+.nav-menu  > .menu-item > a:after {content: ''; }
+ 
+.nav-menu  .menu-item > a:only-child:after {content: ''; } 	
+
+	*/
+ 
+ 
+ 
+	
+	
+@media (min-width: 700px) {
+
+	.nav { background-color_: #47A3DA;#dedede }
+
+	.nav,
+	 .nav-container,
+	 .nav-container.is-visible {
+	  position: static;
+	  top: auto;
+	  left: auto;
+	  z-index: auto;
+	  -webkit-transform: translateX(0);
+	  -ms-transform: translateX(0);
+	  transform: translateX(0);
+	}
+
+	.nav-container,
+	 .nav-container.is-visible {
+	  visibility: visible;
+	  height: auto;
+	  min-height: 0;
+	  overflow-y: visible;
+	}
+
+	.nav-toggle { display: none; }
+
+	/* 1. Display menu items inline */
+
+	.nav-menu > .menu-item,
+	 .nav-menu > .menu-item.is-active {
+	  display: inline-block; /* 1 */
+	  background-color: transparent;
+	  border: 0;
+	}
+
+	/* Remove bottom border on last child */
+
+	.nav-menu > .menu-item:last-child { border: 0; }
+
+	.nav-menu .menu-item {
+	  -webkit-transition: background-color 0.15s ease-in-out,  color 0.15s ease-in-out;
+	  transition: background-color 0.15s ease-in-out,  color 0.15s ease-in-out;
+	} 
+	 
+	/* Remove +/- icons */
+
+	.has-dropdown:after { content: "" !important; }
+
+	/* Add a caret to top-level menu items that have dropdowns */
+
+	.nav-menu > .has-dropdown:after {
+	  position: absolute;
+	  top: 50%;
+	  right: 1rem;
+	  width: 0;
+	  height: 0;
+	  margin-top: -2px;
+	  margin-left: -4px;
+	  content: "";
+	  border-width: 5px 5px 0 5px;
+	  border-style: solid;
+	  border-color: #444 transparent transparent transparent;
+	} 
+	/* Increase padding to compensate for caret */
+
+	.has-dropdown > .menu-link { padding-right: 2rem; }
+
+	/* Re-style dropdowns for larger screens */
+
+	.nav-dropdown {
+	  display: block;
+	  opacity: 0;
+	  position: absolute;
+	  top: 100%;
+	  width: 240px;
+	  margin: 0;
+	  padding: 0.5rem 0;
+	  background-color_: #47A3DA;#dedede;
+	  box-shadow: 0 0 4px hsla(0, 0%, 0%, 0.15);
+	  visibility: hidden;
+	  -webkit-transition: visibility 0s linear 0.25s,  opacity 0.25s linear;
+	  transition: visibility 0s linear 0.25s,  opacity 0.25s linear;
+	}
+
+	.has-dropdown:hover > .nav-dropdown {
+	  visibility: visible;
+	  opacity: 1;
+	  -webkit-transition-delay: 0s;
+	  transition-delay: 0s;
+	}
+
+	.nav-dropdown .menu-item { border: 0; }
+
+	.nav-dropdown .menu-item:hover,
+	 .nav-dropdown .nav-dropdown .menu-item:hover { background-color:#00486A;#d0d0d0; }
+	/*  ---------------    menu ultimo----------------------------------------------*/
+	.nav-dropdown .nav-dropdown,
+	 .nav-dropdown .nav-dropdown .menu-item { background-color:  #47A3DA;#dedede; }
+
+	.nav-dropdown .nav-dropdown {
+	  z-index: 9998;
+	  top: 0;
+	  left: 100%;
+	}
+
+	.content { margin-top: 0; padding-top_: 0px;}
+
+}
+.logo { width_:570px  width_:200px;}
+.mediomenu { margin-left_:200px;background_:#ccc;text-align:right}
+
+.logomovil { display:none; }
+
+@media screen and (max-width: 1200px) {
+	.logo{ width:450px }
+	.wrapper {width: 95%; }
+	
+}
+@media screen and (max-width: 1100px) {
+	.logo { width:310px }	
+	.wrapper {width: 95%; }
+}
+@media screen and (max-width: 1050px) {
+	.logo { width:200px }
+    .wrapper {width: 98%; }	
+}
+@media screen and (max-width: 1000px) {
+	.logo { width:180px }
+    .wrapper {width: 96%; }		
+}
+
+
+@media screen and (max-width: 900px) {
+	.logo { width:160px }
+    .wrapper {width: 97%; }	
+}
+
+
+@media screen and (max-width: 800px) {
+	.logo { width:150px }
+	.nav {  background-color: #47A3DA;#efefef;}	
+	.nav-container {  background-color: #47A3DA;}	
+	.t120{ font-size:100px  }
+}
+
+
+
+@media screen and (max-width: 700px) {
+	.logo { display: none; }
+	.logomovil { display: block; }
+	.t120{ font-size:90px  }
+	.nav-menu{ text-align:left  }
+	#loginname { display: none; }
+	#salir { display: none; }
+}
+
+
+@media screen and (max-width: 400px) {
+	.logo { display: none; }
+	.logomovil { display: block; } 
+	.t120{ font-size:100%px  }
+	.nav-menu{ text-align:left  }
+	#loginname { display: none; }
+	#salir { display: none; }	
+	
+	.content_ {  padding-top: 120px;}
+	
+	.pie  .pies  {  font-size:12px   }
+	
+}
+
+
+
+
+
+.grid_12 {  width: 1140px;}
+.grid_11 {  width: 1040px;}
+.grid_10 {  width: 940px;}
+.grid_9 {  width: 840px;}
+.grid_8 {  width: 740px;}
+.grid_7 {  width: 640px;}
+.grid_6 {  width: 540px;}
+.grid_5 {  width: 440px;}
+.grid_4 {  width: 340px;}
+.grid_3 {  width: 240px;}
+.grid_2 {  width: 140px;}
+.grid_1 {  width: 40px;}
+.gridBIG_12 {  width: 1200px;}
+.gridBIG_11 {  width: 1100px;}
+.gridBIG_10 {  width: 1000px;}
+.gridBIG_9 {  width: 900px;}
+.gridBIG_8 {  width: 800px;}
+.gridBIG_7 {  width: 700px;}
+.gridBIG_6 {  width: 600px;}
+.gridBIG_5 {  width: 500px;}
+.gridBIG_4 {  width: 400px;}
+.gridBIG_3 {  width: 300px;}
+.gridBIG_2 {  width: 200px;}
+.gridBIG_1 {  width: 100px;}
+@media (min-width: 980px) and (max-width: 1152px) {  
+  .grid_12 { width: 940px; }
+  .grid_11 {    width: 860px;  }
+  .grid_10 {    width: 780px;  }
+  .grid_9 {    width: 700px;  }
+  .grid_8 {    width: 620px;  }
+  .grid_7 {    width: 540px;  }
+  .grid_6 {    width: 460px;  }
+  .grid_5 {    width: 380px;  }
+  .grid_4 {    width: 300px;  }
+  .grid_3 {    width: 220px;  }
+  .grid_2 {    width: 140px;  }
+  .grid_1 {    width: 60px;  }  
+  .gridBIG_12 {    width: 980px;  }
+  .gridBIG_11 {    width: 900px;  }
+  .gridBIG_10 {    width: 820px;  }
+  .gridBIG_9 {    width: 740px;  }
+  .gridBIG_8 {    width: 660px;  }
+  .gridBIG_7 {    width: 580px;  }
+  .gridBIG_6 {    width: 500px;  }
+  .gridBIG_5 {    width: 420px;  }
+  .gridBIG_4 {    width: 340px;  }
+  .gridBIG_3 {    width: 260px;  }
+  .gridBIG_2 {    width: 180px;  }
+  .gridBIG_1 {    width: 100px;  }
+}
+@media (min-width: 768px) and (max-width: 979px) { 
+  .grid_12 {    width: 748px;  }
+  .grid_11 {    width: 684px;  }
+  .grid_10 {    width: 620px;  }
+  .grid_9 {    width: 556px;  }
+  .grid_8 {    width: 492px;  }
+  .grid_7 {    width: 428px;  }
+  .grid_6 {    width: 364px;  }
+  .grid_5 {    width: 300px;  }
+  .grid_4 {    width: 236px;  }
+  .grid_3 {    width: 172px;  }
+  .grid_2 {    width: 108px;  }
+  .grid_1 {    width: 44px;  }  
+  .gridBIG_12 {    width: 788px;  }
+  .gridBIG_11 {    width: 724px;  }
+  .gridBIG_10 {    width: 660px;  }
+  .gridBIG_9 {    width: 596px;  }
+  .gridBIG_8 {    width: 532px;  }
+  .gridBIG_7 {    width: 468px;  }
+  .gridBIG_6 {    width: 404px;  }
+  .gridBIG_5 {    width: 340px;  }
+  .gridBIG_4 {    width: 276px;  }
+  .gridBIG_3 {    width: 212px;  }
+  .gridBIG_2 {    width: 148px;  }
+  .gridBIG_1 {    width: 84px;  }
+}
+@media (max-width: 767px) {
+  .grid_12 {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  } 
+  .grid_11 {    width: 684px;  }
+  .grid_10 {    width: 620px;  }
+  .grid_9 {    width: 556px;  }
+  .grid_8 {    width: 492px;  }
+  .grid_7 {    width: 428px;  }
+  .grid_6 {    width: 364px;  }
+  .grid_5 {    width: 300px;  }
+  .grid_4 {    width: 236px;  }
+  .grid_3 {    width: 172px;  }
+  .grid_2 {    width: 108px;  }
+  .grid_1 {    width: 44px;  }  
+  .gridBIG_12 {    width: 788px;  }
+  .gridBIG_11 {    width: 724px;  }
+  .gridBIG_10 {    width: 660px;  }
+  .gridBIG_9 {    width: 596px;  }
+  .gridBIG_8 {    width: 532px;  }
+  .gridBIG_7 {    width: 468px;  }
+  .gridBIG_6 {    width: 404px;  }
+  .gridBIG_5 {    width: 340px;  }
+  .gridBIG_4 {    width: 276px;  }
+  .gridBIG_3 {    width: 212px;  }
+  .gridBIG_2 {    width: 148px;  }
+  .gridBIG_1 {    width: 84px;  } 
+  
+  
+}
+
+
+@media (max-width: 400px) {
+
+  .grid_6 {    width: 100%;  }
+  .gridBIG_6 {    width: 100%;  }  
+  .img {width:100%}
+  .subpie {width:100%}
+  
+  
+}
+
+
+
+
+
+

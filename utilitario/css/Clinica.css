@@ -1,0 +1,27 @@
+.menu-fixed {background-color: #48B276;}
+.nav-toggle {  background-color:#3C9867;}
+.nav-dropdown {background-color: #3C9867}
+
+.pie {   background:#383838;color_:green  }
+
+.tableM th { 
+	background: #383838;#3FAE29; 	 
+}
+
+.botonNuevo{background:#31C689;}
+@media (min-width: 700px) {	
+	.nav-dropdown .menu-item:hover, .nav-dropdown .nav-dropdown .menu-item:hover { background-color:green; } 
+	.nav-dropdown .nav-dropdown, .nav-dropdown .nav-dropdown .menu-item { background-color:  #3C9867; }	
+}
+
+@media screen and (max-width: 800px) {
+	.nav {  background-color: #3C9867;}	
+	.nav-container {  background-color:#3C9867;}
+	.nav-dropdown .menu-item:hover{ background-color:green; } 
+	.nav-dropdown .nav-dropdown .menu-item:hover { background-color:green; } 
+	
+	.nav-dropdown .nav-dropdown, .nav-dropdown .nav-dropdown .menu-item { background-color:#383838; }		
+}
+
+
+.subpie {   background:#43B173;green }

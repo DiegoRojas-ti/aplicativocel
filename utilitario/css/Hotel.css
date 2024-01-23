@@ -1,0 +1,30 @@
+.menu-fixed {background-color: #B29D64;}
+.nav-toggle {  background-color:#97824A;}
+.nav-dropdown {background-color: #97824A}
+/*color2:392A36,Pie362733,otr5E3653    http://www.templatemonster.com/es/demo/46510.html color3:3C3742
+http://www.templatemonster.com/es/demo/45887.html
+
+*/
+.pie {   background:#383838;   }
+
+.tableM th { 
+	background: #383838;#3FAE29; 	 
+}
+
+.botonNuevo{background:#875829;}
+@media (min-width: 700px) {	
+	.nav-dropdown .menu-item:hover, .nav-dropdown .nav-dropdown .menu-item:hover { background-color:#875829; } 
+	.nav-dropdown .nav-dropdown, .nav-dropdown .nav-dropdown .menu-item { background-color:  #97824A; }	
+}
+
+@media screen and (max-width: 800px) {
+	.nav {  background-color: #97824A;}	
+	.nav-container {  background-color:#97824A;}
+	.nav-dropdown .menu-item:hover{ background-color:#875829; } 
+	.nav-dropdown .nav-dropdown .menu-item:hover { background-color:#875829; } 
+	
+	.nav-dropdown .nav-dropdown, .nav-dropdown .nav-dropdown .menu-item { background-color:#383838; }		
+}
+
+
+.subpie {  background:url(bg.png); background_:#728799 }
